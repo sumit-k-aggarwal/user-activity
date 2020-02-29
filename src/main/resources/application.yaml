@@ -13,7 +13,7 @@ user-activity-rule-conditions:
       outcome: "Last seen $elapsed_duration hours ago"
       type: Hours
     -
-      expression: "$elapsed_duration >= 1 && $elapsed_duration <= 31"
+      expression: "$elapsed_duration >= 1 && $elapsed_duration < 31"
       outcome: "Last seen $elapsed_duration days ago"
       type: Days
     -

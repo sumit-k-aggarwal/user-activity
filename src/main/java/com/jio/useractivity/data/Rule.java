@@ -15,6 +15,9 @@ import java.util.List;
 @Configuration
 public class Rule {
     List<Condition> conditions;
+    public void setConditions(List<Condition> conditions) {
+        this.conditions = conditions;
+    }
 
     public String executeRule (Date inputDateTime) {
         Date now = new Date();
@@ -37,9 +40,5 @@ public class Rule {
             }
         }
         return null;
-    }
-
-    public void setConditions(List<Condition> conditions) {
-        this.conditions = conditions;
     }
 }
