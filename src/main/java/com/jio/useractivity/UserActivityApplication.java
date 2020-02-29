@@ -22,7 +22,6 @@ public class UserActivityApplication implements CommandLineRunner {
 	String dateFormat = "yyyyMMddHHmm";
 
 	public static void main(String[] args) {
-		System.out.println("ENTERED");
 		ConfigurableApplicationContext ctx = SpringApplication.run(UserActivityApplication.class, args);
 		int exitCode = SpringApplication.exit(ctx, new ExitCodeGenerator() {
 			@Override
@@ -47,11 +46,14 @@ public class UserActivityApplication implements CommandLineRunner {
 			Date sourceDCTime = null;
 			try {
 				sourceDCTime = dateTimeUtil.stringToDate(dateTime);
+				String lastActivity = activityService.getUserLastActivity(sourceDCTime);
+				System.out.println("Last Reported as : " + lastActivity);
 			} catch (ParseException e) {
 				throw new RuntimeException(e);
+			} catch (Exception e) {
+				System.err.println("Unable to get Last Reported time due to error : " + e.getLocalizedMessage());
 			}
-			String lastActivity = activityService.getUserLastActivity(sourceDCTime);
-			System.out.println("lastActivity:" + lastActivity);
+
 		} else {
 			System.err.println("Missing DateTime Input!");
 		}

@@ -1,11 +1,10 @@
-# user-activity
+# User Activity Service
 
-An Application to get "Last Seen" Time for applications like WhatsApp. This is a run once Spring Boot application which expects first argument as Input Date Time a mandatory input and an optional data format.
-
+A Service/Application to get "Last Seen" Time for applications like WhatsApp. Currently this is a run once Spring Boot application which expects first argument as Input Date Time a mandatory input and an optional data format.
 
 Assumptions:
-If dateformat is not specified, application assumes dateFormat as yyyyMMddHHmm. 
-Input datetime is expected to be in the format of defined date format. 
+    If input dateformat is not specified, application assumes dateFormat as yyyyMMddHHmm
+    Input datetime is expected to be in the format of defined date format.
 
 Sample Command to Run application as:
 java -jar user-activity-0.0.1-SNAPSHOT.jar 202001161920

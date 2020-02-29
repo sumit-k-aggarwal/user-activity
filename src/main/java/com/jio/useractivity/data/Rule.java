@@ -18,6 +18,9 @@ public class Rule {
 
     public String executeRule (Date inputDateTime) {
         Date now = new Date();
+        if(inputDateTime.after(now)) {
+            throw new RuntimeException("Date entered is in future");
+        }
         JEP jepExpression = new JEP();
         jepExpression.setAllowUndeclared(true);
         jepExpression.addStandardConstants();
