@@ -1,0 +1,26 @@
+user-activity-rule-conditions:
+  conditions:
+    -
+      expression: "$elapsed_duration < 1"
+      outcome: Active
+      type: Seconds
+    -
+      expression: "$elapsed_duration >= 1 && $elapsed_duration < 59"
+      outcome: "Last seen $elapsed_duration minutes ago"
+      type: Minutes
+    -
+      expression: "$elapsed_duration >= 1 && $elapsed_duration < 24"
+      outcome: "Last seen $elapsed_duration hours ago"
+      type: Hours
+    -
+      expression: "$elapsed_duration >= 1 && $elapsed_duration <= 31"
+      outcome: "Last seen $elapsed_duration days ago"
+      type: Days
+    -
+      expression: "$elapsed_duration >= 1 && $elapsed_duration < 12"
+      outcome: "Last seen $elapsed_duration months ago"
+      type: Months
+    -
+      expression: "$elapsed_duration >= 1"
+      outcome: "Last seen $elapsed_duration years ago"
+      type: Years
