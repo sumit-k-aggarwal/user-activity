@@ -29,7 +29,9 @@ Greater than 1 Year           Last seen # years ago
 < 1 Minute                    Active
 
 
+Future Scope:
 
+Expose a Rest Service as user-activity which returns status given input date. Also Make a docker image which can be further used by Container orchastrator tool like Kubernetes.
 
 
 
