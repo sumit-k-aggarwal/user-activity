@@ -12,6 +12,8 @@ Sample Command to Run application as:
 
 java -jar user-activity-0.0.1-SNAPSHOT.jar 202001161920
 
+java -jar user-activity-0.0.1-SNAPSHOT.jar 2020-02-29T1920 yyyy-MM-dd'T'HHmm
+
 Business Logic as followed:
 
 Last Activity Time            Reported as
